@@ -9,8 +9,6 @@ import android.widget.Toast
 import java.lang.Integer.parseInt
 import kotlin.random.Random
 
-lateinit var randNum: Random
-
 class AudioActivity : AppCompatActivity() {
 
     lateinit var number: EditText
@@ -28,8 +26,10 @@ class AudioActivity : AppCompatActivity() {
 
     private fun setOnClickListenerOnGuessingButton(sound: MediaPlayer) {
         guessBtn.setOnClickListener {
-            val randText = ""
-            val random: Int = randNum.nextInt(5) + 1
+            val randText : String = ""
+            // lateinit var randNum: Random
+            var randNum: Random? = null
+            val random: Int = (randNum?.nextInt(5) ?: 0) + 1
             val userChoice: Int = parseInt(number.text.toString().trim())
             if (userChoice < 1 || userChoice > 5) {
                 showToast("Please guess a number between 1 and 5")

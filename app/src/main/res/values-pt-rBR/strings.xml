@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Pictures Media App</string>
-    <string name="activity_main_header_title_text">Só uma porra d\'um teste</string>
+    <string name="activity_main_header_title_text">Essa é uma Activity de exemplo.</string>
 </resources>
